@@ -1,0 +1,6 @@
+
+
+api:
+    josnplaceholder:
+        domain: 'https://jsonplaceholder.typicode.com/'
+        endpoint: 'users'

@@ -1,0 +1,8 @@
+api_key: "ck4fm5hr01qus81pv53gck4fm5hr01qus81pv540"
+
+api:
+  finnhub:
+    domain: "finnhub.io/api/v1"
+    endpoints:
+      quote: '/quote'
+      profile2: "/stock/profile2"
