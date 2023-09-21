@@ -15,5 +15,5 @@ public class CompanyProfileDTO {
     private String ipoDate;
     private String logo;
     private String marketCap;
-    private String curreny;
+    private String currency;
 }

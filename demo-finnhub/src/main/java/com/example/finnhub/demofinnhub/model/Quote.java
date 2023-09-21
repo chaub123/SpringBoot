@@ -12,5 +12,4 @@ public class Quote {
     private double o; // opening ?
     private double pc; // // previous close price
     private int t;
-
 }

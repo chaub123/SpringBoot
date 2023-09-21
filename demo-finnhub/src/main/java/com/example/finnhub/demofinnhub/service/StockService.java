@@ -2,17 +2,23 @@ package com.example.finnhub.demofinnhub.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
+import com.example.finnhub.demofinnhub.entity.Stocks;
 import com.example.finnhub.demofinnhub.model.Profile;
 import com.example.finnhub.demofinnhub.model.Quote;
+import com.example.finnhub.demofinnhub.repository.StockRepository;
 
 @Service
 public class StockService {
 
     @Autowired
     private RestTemplate restTemplate;
+
+    @Autowired
+    StockRepository stockRepository;
 
     @Value(value = "${api.finnhub.domain}")
     private String finnhub; // from yml
@@ -25,6 +31,8 @@ public class StockService {
 
     @Value(value = "${api_key}")
     private String apiKey; // from yml
+
+    
 
     public Quote quote(String symbol) {
         String url = UriComponentsBuilder.newInstance()
@@ -48,5 +56,13 @@ public class StockService {
                 .build().toUriString();
         Profile profile = restTemplate.getForObject(url, Profile.class);
         return profile;
+    }
+
+    public Stocks save(Stocks stocks){
+        return stockRepository.save(stocks);
+    }
+
+    public void deleteById(Long id){
+        stockRepository.deleteById(id);
     }
 }

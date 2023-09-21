@@ -13,7 +13,7 @@ public class StockMapper {
                                             .ipoDate(profile.getIpo())
                                             .logo(profile.getLogo())
                                             .marketCap(profile.getMarketCapitalization())
-                                            .curreny(profile.getCurrency())
+                                            .currency(profile.getCurrency())
                                             .build();
                                             
         return Stock.builder()

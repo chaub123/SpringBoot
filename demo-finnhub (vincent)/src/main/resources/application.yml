@@ -1,12 +1,14 @@
-api_key: "ck4fm5hr01qus81pv53gck4fm5hr01qus81pv540"
+server.port: 8085
 
 api:
   finnhub:
-    domain: "finnhub.io/api/v1"
+    token: 'ck46ck1r01qus81pqgegck46ck1r01qus81pqgf0'
+    domain: 'finnhub.io'
+    base-url: 'api/v1'
     endpoints:
-      quote: '/quote'
-      profile2: "/stock/profile2"
-
+      stock:
+        profile2: '/stock/profile2'
+        quote: '/quote'
 
 spring.datasource:
   url: 'jdbc:postgresql://localhost:5432/postgres'
