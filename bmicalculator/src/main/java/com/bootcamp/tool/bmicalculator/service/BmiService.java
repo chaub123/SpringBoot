@@ -26,6 +26,9 @@ public class BmiService {
     }
 
     public void deleteUser(long id){
+        User user = userRepository.findById(id)
+                        .orElseThrow(() -> new EntityNotFoundException("No this user."));
+        System.out.println("Deleting user with id: "+ id);
         userRepository.deleteById(id);
     }
 
@@ -37,12 +40,15 @@ public class BmiService {
         userRepository.save(user);
     }
 
-    public void newUser(String firstname, String lastname, int age){
+    public Long newUser(String firstname, String lastname, int age){
         User user = User.builder()
                         .firstName(firstname)
                         .lastName(lastname)
                         .age(age)
                         .build();
-        userRepository.save(user);
+        User savedUser = userRepository.save(user);
+        return savedUser.getId();
     }
+
+
 }

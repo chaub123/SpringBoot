@@ -1,12 +1,13 @@
-package com.bootcamp.tool.bmicalculator;
+package com.bootcamp.studentapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BmicalculatorApplication {
+public class StudentappApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BmicalculatorApplication.class, args);
+		SpringApplication.run(StudentappApplication.class, args);
 	}
+
 }

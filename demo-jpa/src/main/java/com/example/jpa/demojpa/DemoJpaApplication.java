@@ -1,12 +1,13 @@
-package com.bootcamp.tool.bmicalculator;
+package com.example.jpa.demojpa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BmicalculatorApplication {
+public class DemoJpaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BmicalculatorApplication.class, args);
+		SpringApplication.run(DemoJpaApplication.class, args);
 	}
+
 }
