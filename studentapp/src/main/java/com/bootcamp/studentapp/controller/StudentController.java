@@ -41,8 +41,9 @@ public class StudentController {
             throw new StudentNotFoundException("Student id not found - " + id);
         }
 
-        Student student = studentService.getStudent(id).
-                            orElse(() -> throw new StudentNotFoundException("Student id not found in DB")); 
+        Student student = studentService.getStudent(id)
+                            .orElseThrow(() -> {
+                                throw new StudentNotFoundException("Student id not found in DB");}); 
 
         return student;
     }
