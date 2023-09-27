@@ -6,7 +6,8 @@ api:
     domain: 'finnhub.io'
     path: '/api/v1'
     endpoints:
-      stock: '/quote'
+      quote: '/quote'
+      profile2: '/stock/profile2'
 
 
 spring.datasource:

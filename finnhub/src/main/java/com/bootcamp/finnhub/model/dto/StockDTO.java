@@ -6,7 +6,6 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 
 @AllArgsConstructor
@@ -14,8 +13,20 @@ import lombok.ToString;
 @Getter
 @Setter
 @Builder
-@ToString
-public class QuoteDTO {
+public class StockDTO {
+    // This class combine QuoteDTO & Prifle2DTO
+
+    private String ticker;
+
+    private String name;
+
+    private String country;
+
+    private String currency;
+
+    private String exchange;
+
+    private String industry;
 
     private double currentPrice;
 
@@ -32,5 +43,4 @@ public class QuoteDTO {
     private double previousClosePrice;
 
     private LocalDateTime timeStampLDT;
-
 }
