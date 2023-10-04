@@ -1,0 +1,22 @@
+api_key: "ck4fm5hr01qus81pv53gck4fm5hr01qus81pv540"
+
+api:
+  finnhub:
+    domain: "finnhub.io/api/v1"
+    endpoints:
+      quote: '/quote'
+      profile2: "/stock/profile2"
+
+
+spring.datasource:
+  url: 'jdbc:postgresql://localhost:5432/postgres'
+  username: 'postgres'
+  password: 'admin123'
+spring.jpa:
+  show-sql: true
+  properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+  hibernate.ddl-auto: update
+
+spring.sql.init:
+  # schema-locations: classpath:ddl/DDL_DROPS.sql, classpath:ddl/DDL_TUSERS.sql, classpath:ddl/DDL_TPOSTS.sql
+  mode: always # always
