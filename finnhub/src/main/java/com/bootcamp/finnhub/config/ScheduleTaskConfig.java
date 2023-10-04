@@ -33,7 +33,7 @@ public class ScheduleTaskConfig {
         System.out.println("System is alive.");
     }
 
-    @Scheduled(fixedRate = 60000) // 60 sec
+    @Scheduled(cron = "0 * 21-23 * * ?")
     public void storePricePerMinute(){
         System.out.println("Storing current price to DB.");
         List<ProfileEntity> list = profileRepository.findAll();

@@ -1,9 +1,11 @@
 package com.bootcamp.finnhub.controller.impl;
 
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.bootcamp.finnhub.controller.StockOperation;
+import com.bootcamp.finnhub.entity.StockPriceEntity;
 import com.bootcamp.finnhub.model.Profile;
 import com.bootcamp.finnhub.model.Quote;
 import com.bootcamp.finnhub.model.Stock;
@@ -28,5 +30,10 @@ public class StockOperationImpl implements StockOperation{
     @Override
     public Stock stock(String symbol){
         return stockService.stock(symbol);
+    }
+
+    @Override
+    public List<StockPriceEntity> prices(String symbol){
+        return stockService.prices(symbol);
     }
 }
